@@ -12,6 +12,7 @@
     ],
     "module": "ESNext",
     "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -19,6 +20,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "outDir": "dist",
+    "verbatimModuleSyntax": true, // new property in TS 5.0. It helps to ignore type import when complier to javascript.
     /* Linting */
     "allowUnreachableCode": false, // Do not allow unreachable code
     "noFallthroughCasesInSwitch": true, // Switch statement must have "break", "return" like statement
@@ -27,9 +30,10 @@
     "noUnusedParameters": true, // shouldn't have unused parameter
     "noPropertyAccessFromIndexSignature": true, // when there is no implicit field defined in type, user must use a['xxx'] instead of a.xxx
     "noUncheckedIndexedAccess": true, // supplement property of 'noPropertyAccessFromIndexSignature'. For no implicit field called, typescript will add undefined type.
+    "esModuleInterop": true, // allow "import XX from "XXX".
   },
   "include": [
-    "src/**/*.(ts|tsx)"
+    "src/**/*"
   ],
   "references": [
     {
