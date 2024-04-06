@@ -1,7 +1,7 @@
+import Home from './screens/Home'
+
 const App = (): JSX.Element => (
-    <h1 className="underline">
-        {import.meta.env.VITE_APPLICAITON_NAME}
-    </h1>
+    <Home />
 )
 
 export default App

@@ -10,6 +10,24 @@
       "DOM",
       "DOM.Iterable"
     ],
+    "baseUrl": ".",
+    "paths": {
+      "@root/*": [
+        "src/*"
+      ],
+      "@ui/*": [
+        "src/components/ui/*"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "@apis/*": [
+        "src/apis/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+    },
     "module": "ESNext",
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
