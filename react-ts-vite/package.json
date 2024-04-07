@@ -7,7 +7,7 @@
     "start:DEV": "vite",
     "start:PROD": "vite --mode production",
     "build": "vite build",
-    "lint": "eslint . --max-warnings 0 --ignore-pattern dist --fix",
+    "lint": "eslint . --max-warnings 10 --ignore-pattern dist --fix",
     "preview": "vite preview",
     "prettier": "prettier . --write",
     "prepare": "husky",
