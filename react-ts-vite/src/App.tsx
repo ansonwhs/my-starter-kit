@@ -1,7 +1,5 @@
-import Home from './screens/Home'
+import Home from './screens/Home';
 
-const App = (): JSX.Element => (
-    <Home />
-)
+const App = (): JSX.Element => <Home />;
 
-export default App
+export default App;

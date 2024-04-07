@@ -4,13 +4,14 @@ import reactPlugin from 'eslint-plugin-react';
 import reactRefreshPlugin from 'eslint-plugin-react-refresh';
 import reactHookPlugin from 'eslint-plugin-react-hooks';
 import tseslintParser from '@typescript-eslint/parser';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 
 export default [
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   {
     files: ['src/**/*.ts', 'src/**/*.tsx'],
-    ignores: ['**/*.config.js', 'src/**/*.test.ts', 'src/**/*.test.tsx', '**/*.d.ts', 'dist'],
+    ignores: ['**/*.config.js', 'src/**/*.test.ts', 'src/**/*.test.tsx', '**/*.d.ts', 'dist', 'node_modules', '.husky', 'public'],
     linterOptions: {
       noInlineConfig: true,
       reportUnusedDisableDirectives: 'error',
@@ -40,7 +41,6 @@ export default [
       'no-use-before-define': 'error',
       'require-atomic-updates': 'error',
       // Suggestions
-      'arrow-body-style': ['error', 'as-needed'],
       'block-scoped-var': 'error',
       'camelcase': ['error', { properties: 'always', ignoreImports: true, ignoreGlobals: true }],
       'complexity': ['error', 15],
@@ -130,5 +130,6 @@ export default [
       'sort-vars': 'warn',
       'yoda': ['error', 'never'],
     },
-  }
+  },
+  eslintPluginPrettierRecommended,
 ]

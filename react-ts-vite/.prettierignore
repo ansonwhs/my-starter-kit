@@ -1,0 +1,20 @@
+# Ignore artifacts:
+dist
+node_modules
+public
+.husky
+
+# Igonre Config File:
+**/*.config.js
+**/*.config.ts
+**/*.d.ts
+**/tsconfig.json
+**/tsconfig.node.json
+package.json
+package-lock.json
+README.md
+**/*.html
+**/*.css
+**/.env.*
+.gitignore
+.prettierignore
