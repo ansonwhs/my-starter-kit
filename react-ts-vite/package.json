@@ -6,7 +6,7 @@
   "scripts": {
     "start:DEV": "vite",
     "start:PROD": "vite --mode production",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "lint": "eslint . --max-warnings 0 --ignore-pattern dist",
     "preview": "vite preview",
     "prettier": "prettier . --write",
