@@ -10,7 +10,8 @@
     "lint": "eslint . --max-warnings 0 --ignore-pattern dist",
     "preview": "vite preview",
     "prettier": "prettier . --write",
-    "prepare": "husky"
+    "prepare": "husky",
+    "tsc": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
     "dayjs": "^1.11.10",

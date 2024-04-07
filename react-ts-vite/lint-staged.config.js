@@ -1,4 +1,4 @@
 
 export default {
-    "*.(ts|tsx)": ['tsc', 'npm run lint', 'npm run prettier']
+    "**/*.(ts,tsx)": ['npm run tsc', 'npm run lint', 'npm run prettier']
 }
