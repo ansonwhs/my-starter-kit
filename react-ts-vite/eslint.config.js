@@ -1,5 +1,6 @@
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
 import reactRecommended from 'eslint-plugin-react/configs/recommended.js';
 import reactRefreshPlugin from 'eslint-plugin-react-refresh';
 import reactHookPlugin from 'eslint-plugin-react-hooks';
@@ -9,6 +10,7 @@ import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 export default [
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
+  // JS Eslint 
   {
     files: ['src/**/*.ts', 'src/**/*.tsx'],
     ignores: ['**/*.config.js', 'src/**/*.test.ts', 'src/**/*.test.tsx', '**/*.d.ts', 'dist', 'node_modules', '.husky', 'public'],
@@ -140,6 +142,7 @@ export default [
       'yoda': ['error', 'never'],
     },
   },
+  // React Eslint
   {
     ...reactRecommended,
     settings: {
@@ -192,6 +195,16 @@ export default [
       'react/self-closing-comp': 'error',
       'react/style-prop-object': 'error',
       'react/void-dom-elements-no-children': 'error',
+    }
+  },
+  // JSX A11y Eslint
+  {
+    plugins: {
+      'jsx-a11y': jsxA11y
+    },
+    rules: {
+      ...jsxA11y.configs.recommended.rules,
+      'jsx-a11y/prefer-tag-over-role': 'error',
     }
   },
   eslintPluginPrettierRecommended,
