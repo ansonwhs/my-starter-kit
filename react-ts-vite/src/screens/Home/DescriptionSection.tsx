@@ -69,6 +69,18 @@ const PrettierConfigSection = (): JSX.Element => (
 	</SectionCard>
 );
 
+const EslintConfigSection = (): JSX.Element => (
+	<SectionCard title='Eslint Configuration'>
+		<div>
+			<p>
+				This is the most critical configuration in this starter kit. In
+				order to keep code quality, differenet ESLINT rules has setup.
+			</p>
+			<p className='underline py-2'>Plain JavaScript Eslint</p>
+		</div>
+	</SectionCard>
+);
+
 const DescriptionSection = (): JSX.Element => (
 	<div className='grid grid-cols-1 md:grid-cols-2 justify-items-center gap-2'>
 		<TsConfigSection />
@@ -76,6 +88,7 @@ const DescriptionSection = (): JSX.Element => (
 		<ViteConfigSection />
 
 		<PrettierConfigSection />
+		<EslintConfigSection />
 	</div>
 );
 
