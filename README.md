@@ -69,3 +69,14 @@ const config: Config = {
 
 export default config;
 ```
+
+### src/__test__/setup.ts
+
+```TS
+import "@testing-library/jest-dom";
+
+const setUp = () => {};
+
+export default setUp;
+
+```
