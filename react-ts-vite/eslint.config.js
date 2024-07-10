@@ -13,7 +13,7 @@ export default [
   // JS Eslint 
   {
     files: ['src/**/*.ts', 'src/**/*.tsx'],
-    ignores: ['**/*.config.js', 'src/**/*.test.ts', 'src/**/*.test.tsx', '**/*.d.ts', 'dist', 'node_modules', '.husky', 'public'],
+    ignores: ['**/*.config.js', '**/*.config.cjs', 'src/**/*.test.ts', 'src/**/*.test.tsx', '**/*.d.ts', 'dist', 'node_modules', '.husky', 'public'],
     linterOptions: {
       noInlineConfig: true,
       reportUnusedDisableDirectives: 'error',

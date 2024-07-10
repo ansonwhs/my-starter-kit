@@ -40,7 +40,7 @@ const config: Config = {
   clearMocks: true,
   collectCoverage: true,
   collectCoverageFrom: [
-    "**/src/*.{js,jsx,ts,tsx}",
+    "**/src/**/*.{js,jsx,ts,tsx}",
     "!**/node_modules/**",
     "!**/src/assets/**",
     "!**/src/**/constant.{ts,js}",
