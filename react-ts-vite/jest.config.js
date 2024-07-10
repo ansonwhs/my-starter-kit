@@ -1,3 +1,4 @@
+/** @type {Config} */
 const config = {
     bail: 10,
     clearMocks: true,
@@ -9,6 +10,9 @@ const config = {
         "!**/src/**/constant.{ts,js}",
         "!**/src/**/*.d.{ts,js}",
         "!**/src/main.tsx",
+        "!**/src/App.tsx",
+        "!**/src/**/index.ts",
+        "!**/src/__test__/**",
     ],
     coverageThreshold: {
         global: {
@@ -22,9 +26,17 @@ const config = {
         __DEV__: true,
     },
     injectGlobals: true,
+    moduleNameMapper: {
+        '^@ui/(.*)$': '<rootDir>/src/components/ui/$1',
+        '^@root/(.*)$': '<rootDir>/src/$1',
+        '^@hooks/(.*)$': '<rootDir>/src/hooks/$1',
+        '^@apis/(.*)$': '<rootDir>/src/apis/$1',
+        '^@components/(.*)$': '<rootDir>/src/components/$1',
+    },
     reporters: ["default"],
     resetMocks: true,
-    setupFilesAfterEnv: ["<rootDir>/src/__test__/setup.ts"],
+    setupFiles: ["<rootDir>/src/__test__/envSetup.js"],
+    setupFilesAfterEnv: ["<rootDir>/src/__test__/afterEnvSetup.ts"],
     silent: true,
     testMatch: ["<rootDir>/src/**/*.test.{ts,tsx,js,jsx}"],
     testEnvironment: "jsdom",

@@ -8,12 +8,14 @@ import tseslintParser from '@typescript-eslint/parser';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 
 export default [
+  {
+    ignores: ['**/*.config.js', '**/*.config.cjs', 'src/**/*.test.ts', 'src/**/*.test.tsx', 'src/__test__/**/*', '**/*.d.ts', 'dist', 'node_modules', '.husky', 'public'],
+  },
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   // JS Eslint 
   {
     files: ['src/**/*.ts', 'src/**/*.tsx'],
-    ignores: ['**/*.config.js', '**/*.config.cjs', 'src/**/*.test.ts', 'src/**/*.test.tsx', 'src/__test__/**/*', '**/*.d.ts', 'dist', 'node_modules', '.husky', 'public'],
     linterOptions: {
       noInlineConfig: true,
       reportUnusedDisableDirectives: 'error',
