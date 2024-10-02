@@ -41,7 +41,7 @@ export default [
     },
     rules: {
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-      'array-callback-return': ['error', { checkForEach: true, allowVoid: true }],
+      'array-callback-return': ['error', { allowVoid: true }],
       // Possible Problems
       'no-await-in-loop': 'error',
       'no-constant-binary-expression': 'error',
